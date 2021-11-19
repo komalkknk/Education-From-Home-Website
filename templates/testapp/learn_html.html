@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% block body_block %}
+<style>
+.sidebar {
+  height: 100%;
+  width: 15%;
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 20%; /* Stay at the top */
+  left: 0;
+  background-color: black; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+.sidebar button {
+  width:100%;
+}
+
+.main {
+  margin-left:4%;
+}
+
+.column1 {
+  float: left;
+  width: 15%;
+  height:100%;
+  padding: 1px;
+}
+.column2 {
+  float: left;
+  width: 55%;
+  height:100%;
+  padding: 10px;
+  overflow: scroll;
+  position:fixed;
+  margin-left:15%;
+}
+.column3 {
+  float: left;
+  width: 30%;
+  height:100%;
+  padding: 10px;
+  overflow: hidden;
+  position:fixed;
+  margin-left:70%;
+}
+
+.row{
+  width: 100%;
+  height:100%;
+}
+</style>
+<!-- Sidebar -->
+<div class="row">
+    <div class="column1">
+      <h3 style="color:green;font-family:cursive;margin-top:1%;font-size:20.5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTML Tutorial</h3>
+      <div class="sidebar">
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Home</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Introduction</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Editors</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Basics</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Elements</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Attributes</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Headings</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Paragraphs</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Styles</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Formatting</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Quotations</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Comments</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Colors</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-CSS</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Links</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Images</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Tables</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-List</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Block & Inline</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Classes</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Id</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Iframes</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Javascript</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-File Paths</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Head</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Layout</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Responsive</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Computercode</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Sematics</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Style Guides</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Entities</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Symbols</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Emojis</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Charset</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-URL Encode</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Forms</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Forms Attributes</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Form Elements</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Input Types</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Input Attributes</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Input Form Attributes</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Canvas</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-SVG</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Media</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Video</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Audio</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Plug-ins</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Geolocation</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Drag/Drop</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Web Storage</button>
+        <button onclick="htmlHome()" class="btn btn-success">HTML-Web Workers</button>
+      </div>
+    </div>
+
+<!-- Page Content -->
+  <div class="column2" style="background-color:#FAEBD7;">
+    <div class="main">
+      <p id="MyP"></p>
+    </div>
+  </div>
+
+<!-- Online Editor -->
+  <div class="column3" style="background-color:#F0F8FF;">
+    <h2 style="color:green;font-family:cursive;font-size:25px">Online Editor</h2>
+    <iframe src="https://trinket.io/embed/html/2eda69310f?runMode=autorun" width="100%" height="480px" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% load socialaccount %}
+{% providers_media_js %}
+{% block body_block %}
+    <div class="container" align="center">
+    <h1>Login</h1>
+   <form>
+        {{form.as_p}}
+        {%csrf_token%}
+       <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+
+{% endblock %}

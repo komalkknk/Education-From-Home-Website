@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{%load static%}
+{% block body_block %}
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=email] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  width: 85%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+</style>
+
+
+<div class="container" style="background-color:wheat;">
+  <h1>About Education From Home</h1><br>
+  <h2>What is Education From Home?</h2><br>
+  <div style="font-size:20px;">
+  <p>-Education From Home is a website for web developers, covering all the aspects of web development:<br>
+  <ul>
+	<li><a href="/learn_html">HTML</a></li><br>
+	<li><a href="/learn_css">CSS</a></li><br>
+	<li><a href="/learn_javascript">Javascript</a></li><br>
+  </ul><hr><br>
+<h2>Easy Learning</h2><br>
+<p>-Education From Home has focus on simplicity.</p><br>
+<p>-Education From Home practice easy learning.</p><br>
+<p>-Education From Home uses simple code examples and simple illustrations of how to use it.</p><br>
+<p>-Education From Home' tutorials start from basic level and move all the way up to professional references.</p><br>
+<p>-Education From Home is <b>FREE</b></p><br>
+
+<hr>
+<h3>Contact Us</h3>
+
+<div class="container" style="background-color:wheat;">
+  <form method="post" action="/thankyou/">
+      {{form.as_p}}
+      {%csrf_token%}
+      <input type="submit" value="Submit">
+  </form>
+</div>
+</div>
+</div>
+{% endblock %}

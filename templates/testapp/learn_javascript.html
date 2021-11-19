@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% block body_block %}
+<style>
+.sidebar {
+  height: 100%;
+  width: 15%;
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 20%; /* Stay at the top */
+  left: 0;
+  background-color: black; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+.sidebar button {
+  width:100%;
+}
+
+.main {
+  margin-left:4%;
+}
+
+.column1 {
+  float: left;
+  width: 15%;
+  height:100%;
+  padding: 1px;
+}
+.column2 {
+  float: left;
+  width: 55%;
+  height:100%;
+  padding: 10px;
+  overflow: scroll;
+  position:fixed;
+  margin-left:15%;
+}
+.column3 {
+  float: left;
+  width: 30%;
+  height:100%;
+  padding: 10px;
+  overflow: hidden;
+  position:fixed;
+  margin-left:70%;
+}
+
+.row{
+  width: 100%;
+  height:100%;
+}
+</style>
+<!-- Sidebar -->
+<div class="row">
+    <div class="column1">
+      <h3 style="color:green;font-family:cursive;margin-top:1%;font-size:22.5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JavaScript <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tutorial</h3>
+      <div class="sidebar">
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Home</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Introduction</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Editors</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Basics</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Elements</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Attributes</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Headings</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Paragraphs</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Styles</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Formatting</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Quotations</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Comments</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Colors</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-CSS</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Links</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Images</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Tables</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-List</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Block & Inline</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Classes</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Id</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Iframes</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Javascript</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-File Paths</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Head</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Layout</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Responsive</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Computercode</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Sematics</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Style Guides</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Entities</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Symbols</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Emojis</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Charset</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-URL Encode</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Forms</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Forms Attributes</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Form Elements</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Input Types</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Input Attributes</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Input Form Attributes</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Canvas</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-SVG</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Media</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Video</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Audio</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Plug-ins</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Geolocation</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Drag/Drop</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Web Storage</button>
+        <button onclick="htmlHome()" class="btn btn-success">JavaScript-Web Workers</button>
+      </div>
+    </div>
+
+<!-- Page Content -->
+  <div class="column2" style="background-color:#FAEBD7;">
+    <div class="main">
+      <p id="MyP"></p>
+    </div>
+  </div>
+
+<!-- Online Editor -->
+  <div class="column3" style="background-color:#F0F8FF;">
+    <h2 style="color:green;font-family:cursive;font-size:25px">Online Editor</h2>
+    <iframe src="https://trinket.io/embed/html/2eda69310f?runMode=autorun" width="100%" height="480px" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+{% endblock %}

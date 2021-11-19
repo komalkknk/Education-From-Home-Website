@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% block body_block %}
+<div class="container" align="center">
+      <div class="jumbotron"  style="background-color:lightpink;">
+        <b><h1 style="color:white;font-size:90px;">HTML</h1></b>
+        <p style="color:white;">The language for building web pages</p><br>
+        <p>
+			<a href="/learn_html" class="btn btn-success btn-lg">Learn HTML</a>
+        </p>
+      </div>
+</div>
+<br>
+<div class="container" align="center">
+      <div class="jumbotron"  style="background-color:lightblue;">
+        <b><h1 style="color:black;font-size:90px;">CSS</h1></b>
+        <p style="color:black;">The language for styling web pages</p><br>
+        <p>
+			<a href="/learn_css" class="btn btn-success btn-lg">Learn CSS</a>
+        </p>
+      </div>
+</div>
+<br>
+<div class="container" align="center">
+      <div class="jumbotron"  style="background-color:#ffe866;">
+        <b><h1 style="color:black;font-size:90px;">JavaScript</h1></b>
+        <p style="color:black;">The language for programming web pages</p><br>
+        <p>
+			<a href="/learn_javascript" class="btn btn-success btn-lg">Learn JavaScript</a>
+        </p>
+      </div>
+</div>
+{% endblock %}
